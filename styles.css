@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Monoton&family=Pacifico&family=Audiowide&family=Bangers&family=Creepster&family=Faster+One&family=Nosifer&family=Orbitron&family=Press+Start+2P&family=Rubik+Mono+One&display=swap");
+
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #fff;
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #39ff14;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Orbitron", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.preview-container,
+.controls-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.preview-container {
+    height: 300px;
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 1rem;
+}
+
+#neonText {
+    text-align: center;
+    transition: all 0.3s;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+.controls {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--neon-green);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+.color-options,
+.font-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 0.5rem;
+}
+
+.color-option,
+.font-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.color-option:hover,
+.font-option:hover {
+    transform: scale(1.1);
+}
+
+.color-option.active,
+.font-option.active {
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.font-option {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+.size-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.size-btn {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.size-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.size-btn.active {
+    background-color: var(--neon-green);
+    color: var(--bg-color);
+}
+
+.pricing {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--neon-pink);
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: var(--neon-blue);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--neon-pink);
+    transform: scale(1.05);
+}
+
+.small {
+    font-size: 2rem;
+}
+.medium {
+    font-size: 3rem;
+}
+.large {
+    font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .preview-container {
+        flex: 2;
+        height: 400px;
+    }
+
+    .controls-container {
+        flex: 1;
+    }
+
+    .small {
+        font-size: 3rem;
+    }
+    .medium {
+        font-size: 4rem;
+    }
+    .large {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .preview-container {
+        height: 500px;
+    }
+
+    .small {
+        font-size: 4rem;
+    }
+    .medium {
+        font-size: 5rem;
+    }
+    .large {
+        font-size: 6rem;
+    }
+}

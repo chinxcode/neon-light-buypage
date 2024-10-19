@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Neon Light Shop</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Neon Light Shop</h1>
+            </header>
+            <main>
+                <div class="preview-container">
+                    <div class="preview">
+                        <div id="neonText"></div>
+                    </div>
+                </div>
+                <div class="controls-container">
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="textInput">Your Text</label>
+                            <input type="text" id="textInput" placeholder="Enter your text" />
+                        </div>
+                        <div class="control-group">
+                            <label>Color</label>
+                            <div class="color-options"></div>
+                        </div>
+                        <div class="control-group">
+                            <label>Font</label>
+                            <div class="font-options"></div>
+                        </div>
+                        <div class="control-group">
+                            <label>Size</label>
+                            <div class="size-options">
+                                <button class="size-btn" data-size="small">S</button>
+                                <button class="size-btn" data-size="medium">M</button>
+                                <button class="size-btn" data-size="large">L</button>
+                            </div>
+                        </div>
+                        <div class="pricing">
+                            <p>Price: ₹<span id="price">0</span></p>
+                        </div>
+                        <button id="addToCart" class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
